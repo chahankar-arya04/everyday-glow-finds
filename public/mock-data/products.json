@@ -1,0 +1,25 @@
+[{
+  "_id": "product-1",
+  "title": "Demo Organic Face Oil",
+  "slug": "demo-organic-face-oil",
+  "price": 29.99,
+  "description": "A light, all‑natural facial oil that hydrates and balances skin.",
+  "imageUrl": "/demo-images/face-oil.jpg",
+  "affiliateLink": "https://example.com/affiliate/face-oil",
+  "category": "Skincare",
+  "tags": ["organic", "hydrating"],
+  "demo": true
+},
+{
+  "_id": "product-2",
+  "title": "Demo Bamboo Brush Set",
+  "slug": "demo-bamboo-brush-set",
+  "price": 15.5,
+  "description": "Eco‑friendly bamboo makeup brush set.",
+  "imageUrl": "/demo-images/bamboo-brush.jpg",
+  "affiliateLink": "https://example.com/affiliate/bamboo-brush",
+  "category": "Makeup Tools",
+  "tags": ["bamboo", "eco-friendly"],
+  "demo": true
+}
+]

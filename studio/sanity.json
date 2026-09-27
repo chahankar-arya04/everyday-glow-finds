@@ -1,0 +1,12 @@
+{
+  "projectId": "<YOUR_PROJECT_ID>",
+  "dataset": "production",
+  "apiVersion": "2023-01-01",
+  "basePath": "/studio",
+  "plugins": [
+    "@sanity/base",
+    "@sanity/desk-tool",
+    "@sanity/presentation",
+    "@sanity/visual-editing"
+  ]
+}

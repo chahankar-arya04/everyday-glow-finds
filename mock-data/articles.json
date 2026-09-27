@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "article-1",
+    "title": "5 Natural Skincare Routines for Glowing Skin",
+    "slug": "5-natural-skincare-routines",
+    "excerpt": "Discover simple, natural routines to keep your skin radiant.",
+    "content": "<p>Start your day with a gentle cleanser ...</p>",
+    "imageUrl": "/demo-images/skincare-routine.jpg",
+    "category": "Skincare",
+    "tags": ["natural", "routine"],
+    "demo": true
+  },
+  {
+    "_id": "article-2",
+    "title": "Top 10 Eco‑Friendly Beauty Tools",
+    "slug": "top-10-eco-friendly-beauty-tools",
+    "excerpt": "A curated list of sustainable beauty tools you’ll love.",
+    "content": "<p>From bamboo brushes to reusable cotton pads ...</p>",
+    "imageUrl": "/demo-images/eco-tools.jpg",
+    "category": "Makeup Tools",
+    "tags": ["eco-friendly", "tools"],
+    "demo": true
+  }
+]
