@@ -1,3 +1,4 @@
+﻿/* eslint-disable @typescript-eslint/no-unused-vars */
 import Link from 'next/link';
 import { getProducts } from '@/lib/sanity';
 import ProductCard from '@/components/ui/ProductCard';
@@ -24,3 +25,4 @@ export default async function ProductsPage() {
     </div>
   );
 }
+

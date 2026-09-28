@@ -1,3 +1,4 @@
+﻿/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createClient } from 'next-sanity';
 import imageUrlBuilder from '@sanity/image-url';
 
@@ -65,3 +66,4 @@ export async function getArticleBySlug(slug: string) {
   const all = await fetchMock<any>('articles.json');
   return all.find(a => a.slug === slug) ?? null;
 }
+
