@@ -32,7 +32,7 @@ export async function fetchMock<T>(path: string): Promise<T[]> {
 
 export async function getProducts() {
   if (projectId) {
-    const query = `*[_type == "product" && !(_id in path("drafts."*))] | order(_createdAt desc)`;
+    const query = `*[_type == "product"] | order(_createdAt desc)`;
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await sanityClient.fetch<any[]>(query);
     return result;
@@ -52,7 +52,7 @@ export async function getProductBySlug(slug: string) {
 
 export async function getArticles() {
   if (projectId) {
-    const query = `*[_type == "article" && !(_id in path("drafts."*))] | order(_createdAt desc)`;
+    const query = `*[_type == "article"] | order(_createdAt desc)`;
     return sanityClient.fetch<any[]>(query);
   }
   return fetchMock<any>('articles.json');
