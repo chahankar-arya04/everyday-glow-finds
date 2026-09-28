@@ -1,5 +1,5 @@
-﻿/* eslint-disable @typescript-eslint/no-explicit-any */
-import { createClient } from 'next-sanity';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 
 // Sanity config – will be populated from environment variables after auth.
