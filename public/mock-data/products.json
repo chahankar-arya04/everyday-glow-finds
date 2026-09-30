@@ -1,25 +1,74 @@
-[{
-  "_id": "product-1",
-  "title": "Demo Organic Face Oil",
-  "slug": "demo-organic-face-oil",
-  "price": 29.99,
-  "description": "A light, all‑natural facial oil that hydrates and balances skin.",
-  "imageUrl": "/demo-images/face-oil.jpg",
-  "affiliateLink": "https://example.com/affiliate/face-oil",
-  "category": "Skincare",
-  "tags": ["organic", "hydrating"],
-  "demo": true
-},
-{
-  "_id": "product-2",
-  "title": "Demo Bamboo Brush Set",
-  "slug": "demo-bamboo-brush-set",
-  "price": 15.5,
-  "description": "Eco‑friendly bamboo makeup brush set.",
-  "imageUrl": "/demo-images/bamboo-brush.jpg",
-  "affiliateLink": "https://example.com/affiliate/bamboo-brush",
-  "category": "Makeup Tools",
-  "tags": ["bamboo", "eco-friendly"],
-  "demo": true
-}
+[
+  {
+    "_id": "product-wishcare-serum-20ml",
+    "title": "WishCare Hair Growth Serum Concentrate",
+    "slug": "wishcare-hair-growth-serum-concentrate",
+    "brand": "WishCare",
+    "size": "20 ml",
+    "asin": "B0FN8CR7DK",
+    "category": "Hair Care",
+    "subcategory": "Hair Serum",
+    "description": "A concentrated hair-care serum option formulated for people looking to incorporate a targeted serum into their regular hair-care routine.",
+    "detailedDescription": "WishCare Hair Growth Serum Concentrate comes in a 20 ml bottle equipped with a precision dropper for easy scalp application. Formulated with key active hair-care ingredients including Redensyl, Anagain, and Rice Water in a non-greasy, fast-absorbing base. Suitable for daily or regular night-time scalp application as part of a balanced personal grooming routine.",
+    "keyInfo": [
+      "Targeted scalp serum concentrate with precision dropper",
+      "Compact 20 ml volume suitable for daily routine trials",
+      "Lightweight, non-sticky and water-based texture",
+      "Formulated with botanical & peptide hair-care actives"
+    ],
+    "imageUrl": "/images/products/wishcare-serum-20ml.svg",
+    "merchantProductUrl": "https://www.amazon.in/WishCare-Hair-Growth-Serum-Concentrate/dp/B0FN8CR7DK",
+    "affiliateUrl": "",
+    "affiliateLink": "https://www.amazon.in/WishCare-Hair-Growth-Serum-Concentrate/dp/B0FN8CR7DK",
+    "tags": ["hair-care", "hair-serum", "scalp-care"],
+    "demo": false
+  },
+  {
+    "_id": "product-wishcare-rollon-10ml",
+    "title": "WishCare Hair Growth Serum Roll-On",
+    "slug": "wishcare-hair-growth-serum-roll-on",
+    "brand": "WishCare",
+    "size": "10 ml",
+    "asin": "B0H3PQ6L1K",
+    "category": "Hair Care",
+    "subcategory": "Hair Serum / Scalp Care",
+    "description": "Looking for a compact option to try first? This 10 ml roll-on format is convenient, easy to carry, and designed for targeted application.",
+    "detailedDescription": "A compact 10 ml roll-on serum option that offers an effortless way to apply scalp serum directly to specific areas without mess. The roll-on massager tip facilitates gentle stimulation during application. It serves as a portable, budget-friendly format for travel or for testing the formulation before committing to larger bottles.",
+    "keyInfo": [
+      "Compact 10 ml travel-ready roll-on tube",
+      "Direct applicator head for targeted spot massage",
+      "Convenient pocket size for on-the-go routines",
+      "Easy application without dripping or product wastage"
+    ],
+    "imageUrl": "/images/products/wishcare-rollon-10ml.svg",
+    "merchantProductUrl": "https://www.amazon.in/WishCare-Redensyl-Rosemary-Hairfall-Reduction/dp/B0H3PQ6L1K",
+    "affiliateUrl": "",
+    "affiliateLink": "https://www.amazon.in/WishCare-Redensyl-Rosemary-Hairfall-Reduction/dp/B0H3PQ6L1K",
+    "tags": ["hair-care", "roll-on", "scalp-care", "travel-size"],
+    "demo": false
+  },
+  {
+    "_id": "product-nutrovally-rosemary-200g",
+    "title": "Dried Rosemary Leaves",
+    "slug": "nutrovally-dried-rosemary-leaves",
+    "brand": "NutroVally",
+    "size": "200 g",
+    "asin": "B0GHWT9WPQ",
+    "category": "Hair Care",
+    "subcategory": "Natural / DIY Hair Care",
+    "description": "Naturally dried whole rosemary leaves, popular for preparing homemade rosemary water rinses, herbal hair teas, and DIY infused hair oils.",
+    "detailedDescription": "NutroVally Dried Rosemary Leaves provide 200 grams of naturally dried, aromatic rosemary botanical leaves. Popular among natural beauty enthusiasts for crafting simple homemade hair-care preparations such as rosemary water scalp sprays, boiled herbal rinses, and nourishing herbal oil infusions.",
+    "keyInfo": [
+      "200 g pack of clean, naturally dried whole rosemary leaves",
+      "Versatile botanical for DIY rosemary water sprays and rinses",
+      "Can be infused in carrier oils (like coconut, jojoba, or almond)",
+      "Zero added artificial fragrances or synthetic preservatives"
+    ],
+    "imageUrl": "/images/products/nutrovally-rosemary-200g.svg",
+    "merchantProductUrl": "https://www.amazon.in/NutroVally-Rosemary-Seasoning-Natural-rosemary/dp/B0GHWT9WPQ",
+    "affiliateUrl": "",
+    "affiliateLink": "https://www.amazon.in/NutroVally-Rosemary-Seasoning-Natural-rosemary/dp/B0GHWT9WPQ",
+    "tags": ["hair-care", "diy", "rosemary", "natural-beauty"],
+    "demo": false
+  }
 ]

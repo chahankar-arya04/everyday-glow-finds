@@ -1,28 +1,36 @@
-﻿/* eslint-disable @typescript-eslint/no-unused-vars */
-import Link from 'next/link';
 import { getProducts } from '@/lib/sanity';
 import ProductCard from '@/components/ui/ProductCard';
 
 export const metadata = {
-  title: 'Products – Everyday Glow Finds',
-  description: 'Browse natural beauty and wellness products curated from Pinterest.',
+  title: 'All Curated Products – Everyday Glow Finds',
+  description: 'Browse natural beauty, hair care, and wellness products curated from Pinterest.',
 };
 
 export default async function ProductsPage() {
   const products = await getProducts();
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">All Products</h1>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="mb-10 text-center max-w-2xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mb-3">
+          All Curated Products
+        </h1>
+        <p className="text-sm sm:text-base text-stone-600">
+          Discover verified hair care, skincare, and natural wellness finds.
+        </p>
+      </div>
+
       {products.length === 0 ? (
-        <p>No products found.</p>
+        <div className="text-center py-12 text-stone-500">
+          <p>No products available at the moment.</p>
+        </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map((p) => (
-            <ProductCard key={p._id} product={p} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((product) => (
+            <ProductCard key={product._id} product={product} />
           ))}
         </div>
       )}
     </div>
   );
 }
-

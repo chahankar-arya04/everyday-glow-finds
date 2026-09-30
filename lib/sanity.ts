@@ -1,69 +1,190 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
+import fs from 'fs';
+import path from 'path';
 
-// Sanity config – will be populated from environment variables after auth.
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '';
+export type Product = {
+  _id: string;
+  title: string;
+  slug: string | { current: string };
+  brand?: string;
+  size?: string;
+  asin?: string;
+  category?: string | { title: string };
+  subcategory?: string;
+  description?: string;
+  detailedDescription?: string;
+  keyInfo?: string[];
+  imageUrl?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  image?: any;
+  price?: number;
+  merchantProductUrl?: string;
+  affiliateUrl?: string;
+  affiliateLink?: string;
+  tags?: string[];
+  demo?: boolean;
+};
+
+export type Article = {
+  _id: string;
+  title: string;
+  slug: string | { current: string };
+  description?: string;
+  content?: string;
+  imageUrl?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  image?: any;
+  publishedAt?: string;
+  category?: string | { title: string };
+  tags?: string[];
+  demo?: boolean;
+};
+
+// Sanity config
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'ueb7w6y5';
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
-const apiVersion = '2023-01-01'; // use a UTC date string
+const apiVersion = '2023-01-01';
 
 export const sanityClient = createClient({
   projectId,
   dataset,
   apiVersion,
   useCdn: true,
-  // If no projectId is set (local mock mode), the client will be a no‑op.
 });
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const urlFor = (source: any) => {
-  if (!projectId) return '';
-  const builder = imageUrlBuilder(sanityClient);
-  return builder.image(source).url();
+  if (!source || !projectId) return '';
+  try {
+    const builder = imageUrlBuilder(sanityClient);
+    return builder.image(source).url();
+  } catch {
+    return '';
+  }
 };
 
-/** Helper: fetch JSON mock data when Sanity vars are missing */
-export async function fetchMock<T>(path: string): Promise<T[]> {
-  if (projectId) return [];
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || ''}/mock-data/${path}`);
-  if (!res.ok) return [];
-  const data: T[] = await res.json();
-  return data;
-}
-
-export async function getProducts() {
-  if (projectId) {
-    const query = `*[_type == "product"] | order(_createdAt desc)`;
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const result = await sanityClient.fetch<any[]>(query);
-    return result;
+/** Helper: fetch JSON mock data directly from filesystem or fetch fallback */
+export async function fetchMock<T>(fileName: string): Promise<T[]> {
+  // First try direct filesystem read (guaranteed during SSG/build and SSR)
+  try {
+    const localPath = path.join(process.cwd(), 'mock-data', fileName);
+    if (fs.existsSync(localPath)) {
+      const fileData = fs.readFileSync(localPath, 'utf8');
+      return JSON.parse(fileData) as T[];
+    }
+  } catch {
+    // Fall back to HTTP fetch if fs is not accessible
   }
-  // fallback to mock data
-  return fetchMock<any>('products.json');
-}
 
-export async function getProductBySlug(slug: string) {
-  if (projectId) {
-    const query = `*[_type == "product" && slug.current == $slug][0]`;
-    return sanityClient.fetch<any>(query, { slug });
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || '';
+    const res = await fetch(`${baseUrl}/mock-data/${fileName}`);
+    if (res.ok) {
+      return (await res.json()) as T[];
+    }
+  } catch {
+    // Ignore fetch error
   }
-  const all = await fetchMock<any>('products.json');
-  return all.find(p => p.slug === slug) ?? null;
+  return [];
 }
 
-export async function getArticles() {
-  if (projectId) {
-    const query = `*[_type == "article"] | order(_createdAt desc)`;
-    return sanityClient.fetch<any[]>(query);
+/** Helper to extract string slug */
+export function getSlugString(slug: string | { current: string } | undefined): string {
+  if (!slug) return '';
+  if (typeof slug === 'string') return slug;
+  return slug.current || '';
+}
+
+/** Helper to resolve destination CTA url: affiliateUrl if present, else fallback to merchantProductUrl or affiliateLink */
+export function getDestinationUrl(product: Product): string {
+  if (product.affiliateUrl && product.affiliateUrl.trim().length > 0) {
+    return product.affiliateUrl.trim();
   }
-  return fetchMock<any>('articles.json');
-}
-
-export async function getArticleBySlug(slug: string) {
-  if (projectId) {
-    const query = `*[_type == "article" && slug.current == $slug][0]`;
-    return sanityClient.fetch<any>(query, { slug });
+  if (product.merchantProductUrl && product.merchantProductUrl.trim().length > 0) {
+    return product.merchantProductUrl.trim();
   }
-  const all = await fetchMock<any>('articles.json');
-  return all.find(a => a.slug === slug) ?? null;
+  return product.affiliateLink || '#';
 }
 
+export async function getProducts(): Promise<Product[]> {
+  try {
+    if (projectId) {
+      const query = `*[_type == "product" && !(_id in path("drafts."*))] | order(_createdAt desc)`;
+      const result = await sanityClient.fetch<Product[]>(query);
+      if (Array.isArray(result) && result.length > 0) {
+        return result.map((p) => ({
+          ...p,
+          slug: getSlugString(p.slug),
+          imageUrl: p.imageUrl || (p.image ? urlFor(p.image) : '/images/products/wishcare-serum-20ml.svg'),
+        }));
+      }
+    }
+  } catch {
+    // Graceful fallback to local products
+  }
+  const mockProducts = await fetchMock<Product>('products.json');
+  return mockProducts.map((p) => ({
+    ...p,
+    slug: getSlugString(p.slug),
+  }));
+}
+
+export async function getProductBySlug(slug: string): Promise<Product | null> {
+  try {
+    if (projectId) {
+      const query = `*[_type == "product" && (slug.current == $slug || slug == $slug)][0]`;
+      const result = await sanityClient.fetch<Product>(query, { slug });
+      if (result) {
+        return {
+          ...result,
+          slug: getSlugString(result.slug),
+          imageUrl: result.imageUrl || (result.image ? urlFor(result.image) : '/images/products/wishcare-serum-20ml.svg'),
+        };
+      }
+    }
+  } catch {
+    // Graceful fallback
+  }
+  const all = await getProducts();
+  return all.find((p) => getSlugString(p.slug) === slug) ?? null;
+}
+
+export async function getArticles(): Promise<Article[]> {
+  try {
+    if (projectId) {
+      const query = `*[_type == "article" && !(_id in path("drafts."*))] | order(_createdAt desc)`;
+      const result = await sanityClient.fetch<Article[]>(query);
+      if (Array.isArray(result) && result.length > 0) {
+        return result.map((a) => ({
+          ...a,
+          slug: getSlugString(a.slug),
+          imageUrl: a.imageUrl || (a.image ? urlFor(a.image) : ''),
+        }));
+      }
+    }
+  } catch {
+    // Fallback
+  }
+  return fetchMock<Article>('articles.json');
+}
+
+export async function getArticleBySlug(slug: string): Promise<Article | null> {
+  try {
+    if (projectId) {
+      const query = `*[_type == "article" && (slug.current == $slug || slug == $slug)][0]`;
+      const result = await sanityClient.fetch<Article>(query, { slug });
+      if (result) {
+        return {
+          ...result,
+          slug: getSlugString(result.slug),
+          imageUrl: result.imageUrl || (result.image ? urlFor(result.image) : ''),
+        };
+      }
+    }
+  } catch {
+    // Fallback
+  }
+  const all = await getArticles();
+  return all.find((a) => getSlugString(a.slug) === slug) ?? null;
+}

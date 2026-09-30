@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F4EFE6"/>
+    </linearGradient>
+    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D3B36"/>
+      <stop offset="50%" stop-color="#3E524B"/>
+      <stop offset="100%" stop-color="#1E2724"/>
+    </linearGradient>
+    <linearGradient id="goldCap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#F3E5AB"/>
+      <stop offset="100%" stop-color="#AA820A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle circular pedestal -->
+  <ellipse cx="300" cy="490" rx="180" ry="24" fill="#E2DAD0" opacity="0.6"/>
+  <ellipse cx="300" cy="485" rx="140" ry="16" fill="#D3C9BD" opacity="0.4"/>
+
+  <!-- Bottle Dropper Top Bulb -->
+  <path d="M280 140 C280 115 320 115 320 140 Z" fill="#1C1C1C"/>
+  <!-- Dropper Collar Gold -->
+  <rect x="272" y="140" width="56" height="35" rx="4" fill="url(#goldCap)"/>
+  <line x1="272" y1="152" x2="328" y2="152" stroke="#8A6800" stroke-width="1.5"/>
+
+  <!-- Bottle Neck -->
+  <rect x="278" y="175" width="44" height="25" fill="url(#bottleGrad)"/>
+
+  <!-- Bottle Body (Amber/Dark Green Glass) -->
+  <path d="M250 200 C240 200 230 215 230 240 L230 435 C230 455 245 465 265 465 L335 465 C355 465 370 455 370 435 L370 240 C370 215 360 200 350 200 Z" fill="url(#bottleGrad)"/>
+  
+  <!-- Glass reflection highlight -->
+  <path d="M242 225 L242 445" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+
+  <!-- Label Container -->
+  <rect x="240" y="245" width="120" height="180" rx="6" fill="#FFFDF9" stroke="#E6DEC9" stroke-width="1.5"/>
+
+  <!-- Label Details -->
+  <text x="300" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#2D4A3E" text-anchor="middle" letter-spacing="2">WISHCARE</text>
+  <line x1="260" y1="292" x2="340" y2="292" stroke="#D4AF37" stroke-width="1.5"/>
+  <text x="300" y="318" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#1C1C1C" text-anchor="middle">HAIR GROWTH</text>
+  <text x="300" y="335" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#3D3D3D" text-anchor="middle">SERUM</text>
+  <text x="300" y="352" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="400" fill="#717171" text-anchor="middle">CONCENTRATE</text>
+
+  <rect x="268" y="375" width="64" height="20" rx="3" fill="#EBF2ED"/>
+  <text x="300" y="389" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#234E3E" text-anchor="middle">20 ml</text>
+
+  <!-- Tag Pill at top right -->
+  <g transform="translate(420, 45)">
+    <rect width="135" height="32" rx="16" fill="#2E4A3F"/>
+    <text x="67.5" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">HAIR SERUM</text>
+  </g>
+</svg>

@@ -1,24 +1,26 @@
 [
   {
     "_id": "article-1",
-    "title": "5 Natural Skincare Routines for Glowing Skin",
-    "slug": "5-natural-skincare-routines",
-    "excerpt": "Discover simple, natural routines to keep your skin radiant.",
-    "content": "<p>Start your day with a gentle cleanser ...</p>",
-    "imageUrl": "/demo-images/skincare-routine.jpg",
-    "category": "Skincare",
-    "tags": ["natural", "routine"],
-    "demo": true
+    "title": "Simple Natural Hair-Care Routines for Daily Balance",
+    "slug": "simple-natural-hair-care-routines",
+    "description": "Discover mindful, low-fuss hair-care routines focusing on scalp care, gentle botanicals, and consistent habits.",
+    "excerpt": "Discover mindful, low-fuss hair-care routines focusing on scalp care, gentle botanicals, and consistent habits.",
+    "content": "<p>Building a sustainable hair-care routine doesn't require a shelf full of complicated treatments. By focusing on fundamental scalp care, natural infusions like rosemary water, and lightweight topical serums, you can create a reliable routine tailored to your day.</p><h3>1. Mindful Scalp Care</h3><p>A healthy scalp is the foundation of any hair routine. Gentle massage and clarifying botanical rinses help keep the scalp balanced.</p><h3>2. Natural Herbal Infusions</h3><p>Dried rosemary water has gained widespread popularity as a simple, refreshing herbal mist. Simmer dried leaves in water, cool, and mist onto the scalp.</p>",
+    "imageUrl": "/images/products/nutrovally-rosemary-200g.svg",
+    "category": "Hair Care",
+    "tags": ["natural", "routine", "hair-care"],
+    "demo": false
   },
   {
     "_id": "article-2",
-    "title": "Top 10 Eco‑Friendly Beauty Tools",
-    "slug": "top-10-eco-friendly-beauty-tools",
-    "excerpt": "A curated list of sustainable beauty tools you’ll love.",
-    "content": "<p>From bamboo brushes to reusable cotton pads ...</p>",
-    "imageUrl": "/demo-images/eco-tools.jpg",
-    "category": "Makeup Tools",
-    "tags": ["eco-friendly", "tools"],
-    "demo": true
+    "title": "How to Incorporate Scalp Serums Into Your Night Routine",
+    "slug": "how-to-incorporate-scalp-serums",
+    "description": "A straightforward guide on applying hair serum concentrates and roll-on applicators effectively without product waste.",
+    "excerpt": "A straightforward guide on applying hair serum concentrates and roll-on applicators effectively without product waste.",
+    "content": "<p>Serums deliver concentrated ingredients directly to where they are needed most. Here are simple tips to get the most out of your dropper or roll-on serum.</p><h3>Targeted Sectioning</h3><p>Part your hair in clean sections to ensure direct scalp contact rather than coating the hair shafts.</p><h3>Consistent Application</h3><p>Applying a few drops consistently each evening allows the lightweight formula to absorb overnight without greasiness.</p>",
+    "imageUrl": "/images/products/wishcare-serum-20ml.svg",
+    "category": "Hair Care",
+    "tags": ["hair-care", "serum", "routine"],
+    "demo": false
   }
 ]

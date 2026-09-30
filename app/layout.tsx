@@ -6,6 +6,7 @@ import Footer from '@/components/ui/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://phenomenal-crostata-cc45ad.netlify.app'),
   title: 'Everyday Glow Finds',
   description: 'Simple beauty, wellness and lifestyle finds for a healthier everyday routine.',
   openGraph: {
