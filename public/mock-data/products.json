@@ -70,5 +70,29 @@
     "affiliateLink": "https://www.amazon.in/NutroVally-Rosemary-Seasoning-Natural-rosemary/dp/B0GHWT9WPQ",
     "tags": ["hair-care", "diy", "rosemary", "natural-beauty"],
     "demo": false
+  },
+  {
+    "_id": "product-the-derma-co-niacinamide-10ml",
+    "title": "The Derma Co 10% Niacinamide Serum with 2% Zinc",
+    "slug": "the-derma-co-10-niacinamide-serum",
+    "brand": "The Derma Co",
+    "size": "10 ml",
+    "asin": "B0957VWFBG",
+    "category": "Skin Care",
+    "subcategory": "Face Serum",
+    "description": "A lightweight facial serum formulated with 10% Niacinamide and 2% Zinc, designed for daily skin-clarity routines and balanced hydration.",
+    "detailedDescription": "The Derma Co 10% Niacinamide Face Serum with 2% Zinc comes in a compact 10 ml dropper bottle. Formulated to help support the skin barrier, minimize excess oiliness, and improve overall texture as part of a gentle daily skincare regimen. Suitable for morning or evening application after gentle cleansing.",
+    "keyInfo": [
+      "Formulated with 10% Niacinamide & 2% Zinc PCA",
+      "Compact 10 ml trial bottle with precision dropper",
+      "Water-light, fast-absorbing texture suitable for daily routines",
+      "Designed to support natural skin barrier and oil balance"
+    ],
+    "imageUrl": "/images/products/the-derma-co-niacinamide-10ml.svg",
+    "merchantProductUrl": "https://www.amazon.in/Derma-Co-Niacinamide-Serum-Marks/dp/B0957VWFBG/",
+    "affiliateUrl": "",
+    "affiliateLink": "https://www.amazon.in/Derma-Co-Niacinamide-Serum-Marks/dp/B0957VWFBG/",
+    "tags": ["skin-care", "niacinamide", "face-serum", "acne-marks", "oil-control"],
+    "demo": false
   }
 ]

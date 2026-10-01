@@ -41,6 +41,17 @@ export type Article = {
   demo?: boolean;
 };
 
+export const CATEGORIES = [
+  { name: 'All', slug: 'all' },
+  { name: 'Hair Care', slug: 'hair-care' },
+  { name: 'Skin Care', slug: 'skin-care' },
+  { name: 'Wellness', slug: 'wellness' },
+  { name: 'Style', slug: 'style' },
+  { name: 'Useful Finds', slug: 'useful-finds' },
+] as const;
+
+export type CategorySlug = typeof CATEGORIES[number]['slug'];
+
 // Sanity config
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'ueb7w6y5';
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
@@ -66,7 +77,6 @@ export const urlFor = (source: any) => {
 
 /** Helper: fetch JSON mock data directly from filesystem or fetch fallback */
 export async function fetchMock<T>(fileName: string): Promise<T[]> {
-  // First try direct filesystem read (guaranteed during SSG/build and SSR)
   try {
     const localPath = path.join(process.cwd(), 'mock-data', fileName);
     if (fs.existsSync(localPath)) {
@@ -74,7 +84,7 @@ export async function fetchMock<T>(fileName: string): Promise<T[]> {
       return JSON.parse(fileData) as T[];
     }
   } catch {
-    // Fall back to HTTP fetch if fs is not accessible
+    // Fall back to HTTP fetch
   }
 
   try {
@@ -94,6 +104,23 @@ export function getSlugString(slug: string | { current: string } | undefined): s
   if (!slug) return '';
   if (typeof slug === 'string') return slug;
   return slug.current || '';
+}
+
+/** Helper to get normalized category string */
+export function getCategoryTitle(category: string | { title: string } | undefined): string {
+  if (!category) return 'General';
+  if (typeof category === 'string') return category;
+  return category.title || 'General';
+}
+
+/** Helper to get category slug */
+export function getCategorySlug(categoryName: string): string {
+  return categoryName
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
 /** Helper to resolve destination CTA url: affiliateUrl if present, else fallback to merchantProductUrl or affiliateLink */
@@ -128,6 +155,19 @@ export async function getProducts(): Promise<Product[]> {
     ...p,
     slug: getSlugString(p.slug),
   }));
+}
+
+export async function getProductsByCategory(categorySlug?: string): Promise<Product[]> {
+  const allProducts = await getProducts();
+  if (!categorySlug || categorySlug === 'all') {
+    return allProducts;
+  }
+  const normalizedQuery = categorySlug.toLowerCase().trim();
+  return allProducts.filter((product) => {
+    const catTitle = getCategoryTitle(product.category);
+    const catSlug = getCategorySlug(catTitle);
+    return catSlug === normalizedQuery || catSlug.includes(normalizedQuery) || normalizedQuery.includes(catSlug);
+  });
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {

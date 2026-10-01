@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getProductBySlug, getProducts, getDestinationUrl, getSlugString } from '@/lib/sanity';
+import { getProductBySlug, getProducts, getDestinationUrl, getSlugString, getCategoryTitle } from '@/lib/sanity';
 import ProductCard from '@/components/ui/ProductCard';
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
@@ -27,9 +27,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
   if (!product) notFound();
 
   const destinationUrl = getDestinationUrl(product);
-  const categoryTitle = typeof product.category === 'object' && product.category !== null
-    ? product.category.title
-    : (product.category || 'Hair Care');
+  const categoryTitle = getCategoryTitle(product.category);
 
   // Related products from collection
   const allProducts = await getProducts();
@@ -184,10 +182,10 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
           <div className="flex items-center justify-between mb-6">
             <div>
               <h2 className="text-xl font-bold text-stone-900">
-                Simple Hair-Care Picks on a Budget
+                More Thoughtful Everyday Picks
               </h2>
               <p className="text-xs sm:text-sm text-stone-600">
-                More clean and factual lifestyle recommendations from our collection.
+                Explore more curated skincare, hair-care, and lifestyle recommendations.
               </p>
             </div>
             <Link href="/products" className="text-xs font-semibold text-emerald-800 hover:underline">

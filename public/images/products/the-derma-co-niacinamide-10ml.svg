@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradDerma" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F5F0E9"/>
+    </linearGradient>
+    <linearGradient id="purpleBottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#552973"/>
+      <stop offset="35%" stop-color="#733B99"/>
+      <stop offset="70%" stop-color="#8445AE"/>
+      <stop offset="100%" stop-color="#492164"/>
+    </linearGradient>
+    <linearGradient id="dropperCollar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8E8E8"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D0D0D0"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="600" height="600" fill="url(#bgGradDerma)"/>
+  
+  <!-- Subtle circular pedestal shadow -->
+  <ellipse cx="300" cy="495" rx="170" ry="22" fill="#E2DAD0" opacity="0.6"/>
+  <ellipse cx="300" cy="490" rx="130" ry="14" fill="#D5CBC0" opacity="0.4"/>
+
+  <!-- Dropper Rubber Bulb (White) -->
+  <path d="M282 135 C282 110 318 110 318 135 Z" fill="#F8F8F8" stroke="#E2E2E2" stroke-width="1"/>
+  
+  <!-- Dropper Collar (White / Silver Ring) -->
+  <rect x="274" y="135" width="52" height="34" rx="3" fill="url(#dropperCollar)" stroke="#DADADA" stroke-width="1"/>
+  <line x1="274" y1="147" x2="326" y2="147" stroke="#CCCCCC" stroke-width="1.5"/>
+
+  <!-- Bottle Neck -->
+  <rect x="280" y="169" width="40" height="24" fill="url(#purpleBottle)"/>
+
+  <!-- Purple Bottle Body (10 ml compact apothecary bottle) -->
+  <path d="M255 193 C244 193 234 208 234 230 L234 435 C234 455 248 468 268 468 L332 468 C352 468 366 455 366 435 L366 230 C366 208 356 193 345 193 Z" fill="url(#purpleBottle)"/>
+  
+  <!-- Glass reflection highlight -->
+  <path d="M244 215 L244 445" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" opacity="0.28"/>
+
+  <!-- Signature White/Purple Front Label -->
+  <rect x="242" y="235" width="116" height="195" rx="5" fill="#FFFFFF" stroke="#EAE4ED" stroke-width="1"/>
+  
+  <!-- Top brand bar -->
+  <rect x="242" y="235" width="116" height="36" rx="4" fill="#6B388E"/>
+  <text x="300" y="258" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">The Derma Co</text>
+
+  <!-- Formula Callout -->
+  <text x="300" y="292" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#6B388E" text-anchor="middle">10%</text>
+  <text x="300" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#1C1C1C" text-anchor="middle">Niacinamide</text>
+  <text x="300" y="325" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#4A4A4A" text-anchor="middle">Serum + 2% Zinc</text>
+
+  <line x1="262" y1="338" x2="338" y2="338" stroke="#E5DEEB" stroke-width="1"/>
+
+  <text x="300" y="356" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="600" fill="#6B388E" text-anchor="middle">FOR ACNE MARKS</text>
+  <text x="300" y="369" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7" font-weight="500" fill="#555555" text-anchor="middle">&amp; SPOT CORRECTION</text>
+
+  <!-- Size pill -->
+  <rect x="272" y="388" width="56" height="20" rx="3" fill="#F4EDF8"/>
+  <text x="300" y="402" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#6B388E" text-anchor="middle">10 ml</text>
+
+  <!-- Category Badge at top right -->
+  <g transform="translate(415, 45)">
+    <rect width="140" height="32" rx="16" fill="#6B388E"/>
+    <text x="70" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">SKIN CARE</text>
+  </g>
+</svg>

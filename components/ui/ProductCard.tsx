@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Product, getDestinationUrl, getSlugString } from '@/lib/sanity';
+import { Product, getDestinationUrl, getSlugString, getCategoryTitle } from '@/lib/sanity';
 
 export default function ProductCard({ product }: { product: Product }) {
   const destinationUrl = getDestinationUrl(product);
   const slug = getSlugString(product.slug);
-  const categoryTitle = typeof product.category === 'object' && product.category !== null 
-    ? product.category.title 
-    : (product.category || 'Hair Care');
+  const categoryTitle = getCategoryTitle(product.category);
 
   return (
     <article className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-all duration-300">
