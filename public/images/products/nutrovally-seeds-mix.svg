@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradN" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F2EFE8"/>
+    </linearGradient>
+    <linearGradient id="bagGradN" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8DFB8"/>
+      <stop offset="60%" stop-color="#DDD09E"/>
+      <stop offset="100%" stop-color="#CBBA7A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bgGradN)"/>
+
+  <!-- Shadow pedestal -->
+  <ellipse cx="300" cy="495" rx="190" ry="24" fill="#D4CFC7" opacity="0.55"/>
+
+  <!-- Top seal -->
+  <rect x="200" y="155" width="200" height="22" rx="3" fill="#8B7340"/>
+  <line x1="200" y1="166" x2="400" y2="166" stroke="#6B5520" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Pouch body -->
+  <path d="M210 177 L182 428 C182 458 212 473 300 473 C388 473 418 458 418 428 L390 177 Z" fill="url(#bagGradN)"/>
+
+  <!-- Center circle window with seed icons -->
+  <g transform="translate(300, 305)">
+    <circle r="62" fill="#FFFFFF" opacity="0.9" stroke="#CBBA7A" stroke-width="1.5"/>
+    <!-- Pumpkin seed shape -->
+    <ellipse cx="-18" cy="-22" rx="10" ry="16" fill="#4A7847" transform="rotate(-20)"/>
+    <!-- Sunflower seed -->
+    <ellipse cx="20" cy="-18" rx="8" ry="14" fill="#3A3020" transform="rotate(25)"/>
+    <!-- Watermelon seed -->
+    <ellipse cx="22" cy="18" rx="7" ry="11" fill="#1A1A1A" transform="rotate(-10)"/>
+    <!-- Flax seed -->
+    <ellipse cx="-20" cy="20" rx="6" ry="10" fill="#8B6230" transform="rotate(15)"/>
+    <!-- Center seed -->
+    <ellipse cx="0" cy="2" rx="8" ry="12" fill="#6B9E66" transform="rotate(5)"/>
+  </g>
+
+  <!-- Brand label -->
+  <rect x="220" y="200" width="160" height="38" rx="4" fill="#2E473B"/>
+  <text x="300" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5">NUTROVALLY</text>
+
+  <!-- Product title -->
+  <text x="300" y="392" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#1D3A1A" text-anchor="middle">SEEDS MIX</text>
+  <text x="300" y="412" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#3D5C3A" text-anchor="middle">Pumpkin · Sunflower · Seeds</text>
+
+  <!-- Weight badge -->
+  <rect x="255" y="430" width="90" height="22" rx="4" fill="#FFFFFF" stroke="#8B7340" stroke-width="1"/>
+  <text x="300" y="445" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#5C4520" text-anchor="middle">B0CGNQGFYS</text>
+
+  <!-- Category pill -->
+  <g transform="translate(390, 45)">
+    <rect width="170" height="32" rx="16" fill="#3A6B35"/>
+    <text x="85" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">WELLNESS</text>
+  </g>
+</svg>

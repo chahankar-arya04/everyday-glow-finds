@@ -114,5 +114,63 @@
       "oil-control"
     ],
     "demo": false
+  },
+  {
+    "_id": "product-farmley-seeds-mix-160g",
+    "title": "Farmley Seeds Mix, Edible Seed | Healthy Diet Snacks | 100% Natural, Dietary Fiber, Omega-3s | Chia, Pumpkin, Flax, Watermelon and Sunflower Seeds | 160 g (Pack of 1)",
+    "slug": "farmley-seeds-mix-160g",
+    "brand": "Farmley",
+    "size": "160 g",
+    "asin": "B09LD3528Z",
+    "category": "Wellness",
+    "subcategory": "Seeds / Wellness Food",
+    "description": "A convenient 160 g mixed seed pack featuring chia, pumpkin, flax, watermelon, and sunflower seeds — a natural everyday dietary addition for those looking to include more variety in their routine.",
+    "detailedDescription": "Farmley Seeds Mix brings together five varieties of edible seeds — chia, pumpkin, flax, watermelon, and sunflower — in a single 160 g pack. Seeds are a traditional, minimally processed snack commonly used as a topping for yoghurt, salads, smoothie bowls, or consumed as a standalone snack. The pack is marketed as 100% natural with no added artificial flavours or preservatives. Suitable as a pantry staple for those focused on incorporating more plant-based dietary additions into their daily routine.",
+    "keyInfo": [
+      "160 g pack combining five seed varieties in one pack",
+      "Includes chia, pumpkin, flax, watermelon and sunflower seeds",
+      "Marketed as 100% natural with dietary fibre and Omega-3s",
+      "Versatile use: snack, salad topping, or smoothie bowl addition"
+    ],
+    "imageUrl": "/images/products/farmley-seeds-mix-160g.svg",
+    "merchantProductUrl": "https://www.amazon.in/Farmley-Premium-Pumpkin-Sunflower-Watermelon/dp/B09LD3528Z?source=ps-sl-shoppingads-lpcontext&smid=ARENK22K2PQRH&utm_source=chatgpt.com&th=1&linkCode=ll2&tag=everydayglo07-21&linkId=d41c13d1a1cddfa4a02cc03fb75240b1&ref_=as_li_ss_tl",
+    "affiliateUrl": "https://www.amazon.in/Farmley-Premium-Pumpkin-Sunflower-Watermelon/dp/B09LD3528Z?source=ps-sl-shoppingads-lpcontext&smid=ARENK22K2PQRH&utm_source=chatgpt.com&th=1&linkCode=ll2&tag=everydayglo07-21&linkId=d41c13d1a1cddfa4a02cc03fb75240b1&ref_=as_li_ss_tl",
+    "affiliateLink": "https://www.amazon.in/Farmley-Premium-Pumpkin-Sunflower-Watermelon/dp/B09LD3528Z?source=ps-sl-shoppingads-lpcontext&smid=ARENK22K2PQRH&utm_source=chatgpt.com&th=1&linkCode=ll2&tag=everydayglo07-21&linkId=d41c13d1a1cddfa4a02cc03fb75240b1&ref_=as_li_ss_tl",
+    "tags": [
+      "wellness",
+      "seeds",
+      "snack",
+      "natural"
+    ],
+    "demo": false
+  },
+  {
+    "_id": "product-nutrovally-seeds-mix",
+    "title": "NutroVally Seeds for Weight Management | Pumpkin, Sunflower Seeds",
+    "slug": "nutrovally-seeds-mix",
+    "brand": "NutroVally",
+    "size": "Multipack",
+    "asin": "B0CGNQGFYS",
+    "category": "Wellness",
+    "subcategory": "Seeds / Wellness Food",
+    "description": "A seeds variety pack from NutroVally featuring pumpkin and sunflower seeds, commonly included as part of a balanced daily diet and wellness routine.",
+    "detailedDescription": "NutroVally Seeds for Weight Management is a multi-seed pack featuring pumpkin and sunflower seeds. Seeds such as these are commonly incorporated into everyday diets as a source of plant-based fats, fibre, and micronutrients. Can be consumed as a standalone snack or added to meals such as salads, oatmeal, or yoghurt bowls. The product is positioned within the wellness and weight-management category on Amazon.",
+    "keyInfo": [
+      "Multi-seed pack with pumpkin and sunflower seed varieties",
+      "Commonly used as a plant-based daily snack addition",
+      "Versatile use across snacks, salads, and meal toppers",
+      "No artificial flavours or added preservatives listed"
+    ],
+    "imageUrl": "/images/products/nutrovally-seeds-mix.svg",
+    "merchantProductUrl": "https://www.amazon.in/NutroVally-Weight-Pumpkin-Sunflower-Seeds-Loaded/dp/B0CGNQGFYS?source=ps-sl-shoppingads-lpcontext&psc=1&smid=A3QF0WFHEARZ2S&utm_source=chatgpt.com&linkCode=ll2&tag=everydayglo07-21&linkId=dc019f24781b16079c5fa1132553f4d5&ref_=as_li_ss_tl",
+    "affiliateUrl": "https://www.amazon.in/NutroVally-Weight-Pumpkin-Sunflower-Seeds-Loaded/dp/B0CGNQGFYS?source=ps-sl-shoppingads-lpcontext&psc=1&smid=A3QF0WFHEARZ2S&utm_source=chatgpt.com&linkCode=ll2&tag=everydayglo07-21&linkId=dc019f24781b16079c5fa1132553f4d5&ref_=as_li_ss_tl",
+    "affiliateLink": "https://www.amazon.in/NutroVally-Weight-Pumpkin-Sunflower-Seeds-Loaded/dp/B0CGNQGFYS?source=ps-sl-shoppingads-lpcontext&psc=1&smid=A3QF0WFHEARZ2S&utm_source=chatgpt.com&linkCode=ll2&tag=everydayglo07-21&linkId=dc019f24781b16079c5fa1132553f4d5&ref_=as_li_ss_tl",
+    "tags": [
+      "wellness",
+      "seeds",
+      "pumpkin",
+      "sunflower"
+    ],
+    "demo": false
   }
 ]
