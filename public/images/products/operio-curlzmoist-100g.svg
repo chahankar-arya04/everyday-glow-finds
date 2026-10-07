@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradOp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F2EFE8"/>
+    </linearGradient>
+    <linearGradient id="jarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8EFF8"/>
+      <stop offset="60%" stop-color="#D0DDF0"/>
+      <stop offset="100%" stop-color="#B0C4E8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bgGradOp)"/>
+  <ellipse cx="300" cy="492" rx="145" ry="18" fill="#D4CFC7" opacity="0.55"/>
+
+  <!-- Jar body -->
+  <ellipse cx="300" cy="430" rx="130" ry="30" fill="#B0C4E8"/>
+  <rect x="170" y="255" width="260" height="180" rx="10" fill="url(#jarGrad)" stroke="#8AAAD4" stroke-width="1.5"/>
+  <ellipse cx="300" cy="255" rx="130" ry="30" fill="#D0DDF0" stroke="#8AAAD4" stroke-width="1.5"/>
+
+  <!-- Jar lid -->
+  <ellipse cx="300" cy="225" rx="130" ry="32" fill="#4A6EA0"/>
+  <rect x="170" y="195" width="260" height="32" rx="4" fill="#4A6EA0"/>
+  <ellipse cx="300" cy="195" rx="130" ry="32" fill="#5A7EB0"/>
+
+  <!-- Label -->
+  <rect x="195" y="275" width="210" height="140" rx="6" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="195" y="275" width="210" height="44" rx="6" fill="#3A5A90"/>
+  <text x="300" y="302" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">OPERIO</text>
+
+  <text x="300" y="342" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#1C2C50" text-anchor="middle">CURLZMOIST</text>
+  <text x="300" y="362" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#3A4A70" text-anchor="middle">HAIR MOISTURIZER</text>
+  <text x="300" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="400" fill="#5A6A90" text-anchor="middle">Cream</text>
+
+  <rect x="268" y="392" width="64" height="20" rx="4" fill="#E8EFF8" stroke="#8AAAD4" stroke-width="1"/>
+  <text x="300" y="406" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#3A5A90" text-anchor="middle">100 g</text>
+
+  <!-- Category pill -->
+  <g transform="translate(390, 45)">
+    <rect width="170" height="32" rx="16" fill="#3A5A90"/>
+    <text x="85" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">HAIR CARE</text>
+  </g>
+</svg>

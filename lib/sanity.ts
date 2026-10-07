@@ -135,12 +135,14 @@ export function getDestinationUrl(product: Product): string {
 }
 
 export async function getProducts(): Promise<Product[]> {
+  // Fetch from Sanity CMS
+  let sanityProducts: Product[] = [];
   try {
     if (projectId) {
-      const query = `*[_type == "product" && !(_id in path("drafts."*))] | order(_createdAt desc)`;
+      const query = `*[_type == "product" && !(_id in path("drafts.*"))] | order(_createdAt desc)`;
       const result = await sanityClient.fetch<Product[]>(query);
       if (Array.isArray(result) && result.length > 0) {
-        return result.map((p) => ({
+        sanityProducts = result.map((p) => ({
           ...p,
           slug: getSlugString(p.slug),
           imageUrl: p.imageUrl || (p.image ? urlFor(p.image) : '/images/products/wishcare-serum-20ml.svg'),
@@ -148,13 +150,23 @@ export async function getProducts(): Promise<Product[]> {
       }
     }
   } catch {
-    // Graceful fallback to local products
+    // Graceful fallback
   }
+
+  // Always load mock products and merge with Sanity products.
+  // Mock products whose slug already exists in Sanity are skipped (Sanity is authoritative).
   const mockProducts = await fetchMock<Product>('products.json');
-  return mockProducts.map((p) => ({
+  const normalizedMock = mockProducts.map((p) => ({
     ...p,
     slug: getSlugString(p.slug),
   }));
+
+  const sanitySlugSet = new Set(sanityProducts.map((p) => getSlugString(p.slug)));
+  const extraMockProducts = normalizedMock.filter(
+    (p) => !sanitySlugSet.has(getSlugString(p.slug))
+  );
+
+  return [...sanityProducts, ...extraMockProducts];
 }
 
 export async function getProductsByCategory(categorySlug?: string): Promise<Product[]> {
@@ -193,7 +205,7 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
 export async function getArticles(): Promise<Article[]> {
   try {
     if (projectId) {
-      const query = `*[_type == "article" && !(_id in path("drafts."*))] | order(_createdAt desc)`;
+      const query = `*[_type == "article" && !(_id in path("drafts.*"))] | order(_createdAt desc)`;
       const result = await sanityClient.fetch<Article[]>(query);
       if (Array.isArray(result) && result.length > 0) {
         return result.map((a) => ({

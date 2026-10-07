@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradSh" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F2EFE8"/>
+    </linearGradient>
+    <linearGradient id="bottleGradSh" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F4F0"/>
+      <stop offset="50%" stop-color="#C8E8E0"/>
+      <stop offset="100%" stop-color="#A0D4C8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bgGradSh)"/>
+  <ellipse cx="300" cy="492" rx="130" ry="16" fill="#D4CFC7" opacity="0.55"/>
+
+  <!-- Pump bottle body -->
+  <rect x="220" y="200" width="160" height="260" rx="20" fill="url(#bottleGradSh)" stroke="#7BBDB4" stroke-width="1.5"/>
+
+  <!-- Pump top -->
+  <rect x="280" y="140" width="40" height="70" rx="8" fill="#5BA09A"/>
+  <rect x="274" y="130" width="52" height="18" rx="6" fill="#4A8A84"/>
+  <!-- Pump nozzle -->
+  <rect x="310" y="138" width="40" height="10" rx="5" fill="#4A8A84"/>
+
+  <!-- Label area -->
+  <rect x="235" y="240" width="130" height="160" rx="8" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="235" y="240" width="130" height="42" rx="8" fill="#2E5E58"/>
+  <text x="300" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5">WISHCARE</text>
+
+  <text x="300" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#1C3C38" text-anchor="middle">ANTI-DANDRUFF</text>
+  <text x="300" y="328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#3D5C5A" text-anchor="middle">SHAMPOO</text>
+  <text x="300" y="348" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="400" fill="#5A7876" text-anchor="middle">Hydrating Formula</text>
+
+  <rect x="268" y="368" width="64" height="20" rx="4" fill="#E8F4F0" stroke="#7BBDB4" stroke-width="1"/>
+  <text x="300" y="382" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#2E5E58" text-anchor="middle">120 ml</text>
+
+  <!-- Category pill -->
+  <g transform="translate(390, 45)">
+    <rect width="170" height="32" rx="16" fill="#2E5E58"/>
+    <text x="85" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">HAIR CARE</text>
+  </g>
+</svg>

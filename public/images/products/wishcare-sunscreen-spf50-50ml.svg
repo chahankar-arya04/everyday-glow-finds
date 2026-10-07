@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradSun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F2EFE8"/>
+    </linearGradient>
+    <linearGradient id="tubeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8E8"/>
+      <stop offset="50%" stop-color="#FFE8B0"/>
+      <stop offset="100%" stop-color="#F5D080"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bgGradSun)"/>
+  <ellipse cx="300" cy="492" rx="110" ry="14" fill="#D4CFC7" opacity="0.55"/>
+
+  <!-- Sunscreen tube body -->
+  <rect x="230" y="180" width="140" height="290" rx="18" fill="url(#tubeGrad)" stroke="#D4A830" stroke-width="1.5"/>
+
+  <!-- Tube cap -->
+  <rect x="246" y="155" width="108" height="34" rx="10" fill="#C49020"/>
+
+  <!-- Label -->
+  <rect x="242" y="220" width="116" height="190" rx="6" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="242" y="220" width="116" height="44" rx="6" fill="#C49020"/>
+  <text x="300" y="247" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">WISHCARE</text>
+
+  <!-- SPF badge -->
+  <circle cx="300" cy="295" r="32" fill="#F5D080" stroke="#C49020" stroke-width="2"/>
+  <text x="300" y="289" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#7A5010" text-anchor="middle">SPF</text>
+  <text x="300" y="305" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#7A5010" text-anchor="middle">50</text>
+
+  <text x="300" y="352" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#5C3A10" text-anchor="middle">NIACINAMIDE</text>
+  <text x="300" y="366" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="500" fill="#7A5010" text-anchor="middle">OIL BALANCE FLUID</text>
+  <text x="300" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="500" fill="#7A5010" text-anchor="middle">PA++++</text>
+
+  <rect x="268" y="392" width="64" height="18" rx="4" fill="#FFF8E8" stroke="#D4A830" stroke-width="1"/>
+  <text x="300" y="404" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#7A5010" text-anchor="middle">50 ml</text>
+
+  <!-- Category pill -->
+  <g transform="translate(390, 45)">
+    <rect width="170" height="32" rx="16" fill="#7A5010"/>
+    <text x="85" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">SKIN CARE</text>
+  </g>
+</svg>
