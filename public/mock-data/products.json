@@ -274,7 +274,8 @@
       "Orange colour"
     ],
     "merchantProductUrl": "https://link.amazon/B04HdkUb1",
-    "affiliateLink": "https://link.amazon/B04HdkUb1"
+    "affiliateLink": "https://link.amazon/B04HdkUb1",
+    "imageUrl": "/images/products/zecva-orange-saree.png"
   },
   {
     "_id": "product-palopo-green-saree",
@@ -291,6 +292,7 @@
       "Attached unstitched blouse piece"
     ],
     "merchantProductUrl": "https://link.amazon/B0bSt2OUf",
-    "affiliateLink": "https://link.amazon/B0bSt2OUf"
+    "affiliateLink": "https://link.amazon/B0bSt2OUf",
+    "imageUrl": "/images/products/palopo-green-saree.png"
   }
 ]
