@@ -258,5 +258,39 @@
       "curly-hair"
     ],
     "demo": false
+  },
+  {
+    "_id": "product-zecva-orange-saree",
+    "title": "ZECVA Women's Pure Soft Spun Cotton Lichi Silk Saree with Attached Unstitched Blouse Piece",
+    "slug": "zecva-orange-cotton-lichi-silk-saree",
+    "brand": "ZECVA",
+    "category": "Style",
+    "subcategory": "Saree",
+    "description": "Orange spun cotton lichi silk saree with an attached unstitched blouse piece.",
+    "detailedDescription": "ZECVA Women's Pure Soft Spun Cotton Lichi Silk Saree with Attached Unstitched Blouse Piece in orange. Perfect for elegant and traditional occasions.",
+    "keyInfo": [
+      "Pure soft spun cotton lichi silk",
+      "Attached unstitched blouse piece",
+      "Orange colour"
+    ],
+    "merchantProductUrl": "https://link.amazon/B04HdkUb1",
+    "affiliateLink": "https://link.amazon/B04HdkUb1"
+  },
+  {
+    "_id": "product-palopo-green-saree",
+    "title": "PAL OPO Women's Spun Cotton Lichi Silk Saree with Attached Unstitched Blouse Piece",
+    "slug": "palopo-green-cotton-lichi-silk-saree",
+    "brand": "PAL OPO",
+    "category": "Style",
+    "subcategory": "Saree",
+    "description": "Dark green spun cotton lichi silk saree featuring a gold border and an attached unstitched blouse piece.",
+    "detailedDescription": "PAL OPO Women's Spun Cotton Lichi Silk Saree with Attached Unstitched Blouse Piece. Features a striking dark green colour with a gold border.",
+    "keyInfo": [
+      "Spun cotton lichi silk",
+      "Dark green with gold border",
+      "Attached unstitched blouse piece"
+    ],
+    "merchantProductUrl": "https://link.amazon/B0bSt2OUf",
+    "affiliateLink": "https://link.amazon/B0bSt2OUf"
   }
 ]
