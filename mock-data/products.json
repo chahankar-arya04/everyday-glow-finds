@@ -325,5 +325,36 @@
       "home-decor"
     ],
     "demo": false
+  },
+  {
+    "_id": "product-blazik-magenta-printed-saree",
+    "title": "BLAZIK Women's Traditional Printed Saree",
+    "slug": "blazik-womens-traditional-printed-saree",
+    "brand": "BLAZIK",
+    "size": "Free Size",
+    "asin": "B0HCC381NH",
+    "price": 299,
+    "category": "Style",
+    "subcategory": "Saree",
+    "description": "Add a vibrant touch to your ethnic wardrobe with this magenta traditional printed saree. A versatile option for festive occasions, family gatherings, parties, or everyday traditional styling. The Amazon listing states that an unstitched blouse piece is included.",
+    "detailedDescription": "BLAZIK Women's Traditional Printed Saree with attached unstitched blouse piece. Features a vibrant magenta colour with traditional printed detailing, suitable for festive wear, family gatherings, parties, and everyday ethnic styling.",
+    "keyInfo": [
+      "Rich magenta colour",
+      "Traditional printed design",
+      "Unstitched blouse piece included, as stated in the listing",
+      "Suitable for festive and everyday ethnic styling"
+    ],
+    "imageUrl": "/images/products/blazik-magenta-printed-saree.jpg",
+    "merchantProductUrl": "https://www.amazon.in/BLAZIK-Traditional-Printed-Unstitched-Elegant/dp/B0HCC381NH?mcid=4d40615033b935ca98e5183860a1ad9f&hvadid=790582713348&hvpos=&hvnetw=g&hvrand=11651461848251473398&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007786&hvtargid=pla-2501188059961&psc=1&hvocijid=11651461848251473398-B0HCC381NH-&hvexpln=0&gad_source=1&linkCode=ll2&tag=everydayglo07-21&linkId=eb0cf4c772d0513026ce0a558e5452cf&ref_=as_li_ss_tl",
+    "affiliateUrl": "https://www.amazon.in/BLAZIK-Traditional-Printed-Unstitched-Elegant/dp/B0HCC381NH?mcid=4d40615033b935ca98e5183860a1ad9f&hvadid=790582713348&hvpos=&hvnetw=g&hvrand=11651461848251473398&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007786&hvtargid=pla-2501188059961&psc=1&hvocijid=11651461848251473398-B0HCC381NH-&hvexpln=0&gad_source=1&linkCode=ll2&tag=everydayglo07-21&linkId=eb0cf4c772d0513026ce0a558e5452cf&ref_=as_li_ss_tl",
+    "affiliateLink": "https://www.amazon.in/BLAZIK-Traditional-Printed-Unstitched-Elegant/dp/B0HCC381NH?mcid=4d40615033b935ca98e5183860a1ad9f&hvadid=790582713348&hvpos=&hvnetw=g&hvrand=11651461848251473398&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007786&hvtargid=pla-2501188059961&psc=1&hvocijid=11651461848251473398-B0HCC381NH-&hvexpln=0&gad_source=1&linkCode=ll2&tag=everydayglo07-21&linkId=eb0cf4c772d0513026ce0a558e5452cf&ref_=as_li_ss_tl",
+    "tags": [
+      "style",
+      "saree",
+      "traditional",
+      "festive-wear",
+      "ethnic"
+    ],
+    "demo": false
   }
 ]
